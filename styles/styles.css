@@ -51,17 +51,17 @@ body {
     margin-left:auto;
     margin-right:auto;
 
-    max-width: 18rem;
+    max-width: 24rem;
 
 }
+
 .titre {
     background-color: var(--clr-secondary-600);
     border-radius: 10px 6rem 10px 10px ;
  
     flex-direction: column;
-    padding:2.5rem;
-    
    
+    padding:2.5rem;
     margin-bottom: 1rem;
 
 }
@@ -69,6 +69,7 @@ body {
 
 .titre__logo {
     margin-bottom: 2rem;
+
 }
 
 .titre__icons {
@@ -100,15 +101,9 @@ body {
     padding:2.5rem;
     padding-bottom: 4rem;
 
- 
-
     text-align:center;
 
-   
-
-   
 }
-
 
 
 .storage__header {
@@ -121,11 +116,8 @@ body {
 }
 
 
-
-
-
 .bar, .bar__level {
-    border-radius: 200px;
+    border-radius: 500px;
 }
 
 
@@ -157,33 +149,25 @@ body {
      
 }
 
+
 .bar__level__dot {
-   
     width:calc(var(--bar__height) - var(--bar__padding) * 2);
 
     background-color:var(--clr-secondary-100);
-
     border-radius: 50%;
 
-
 }
-
 
 
 .storage__level_start {
-    float: left;
-    /* font-size: 0.8rem; */
- 
+    float: left; 
 }
+
 
 .storage__level_end {
     float: right;
     font-size: 0.8rem;
 }
-
-
-
-
 
 
 .storage_reminder {
@@ -199,15 +183,13 @@ body {
     color:black;
 
     text-align: center;
+    word-spacing: 0.2rem;
 
     transform: translateY(-2rem);
 
     text-transform: uppercase;
 }
 
-.storage_reminder {
-    word-spacing: 0.2rem;
-}
 
 .big {
     font-weight: 700;
@@ -220,50 +202,83 @@ body {
    
 }
 
+
 .opacity-medium {
     opacity: 0.4;
 }
 
 
 
-
-@media (min-width:500px) {
+@media (min-width:610px) {
     body {
         background-image:url(../images/bg-desktop.png);
         background-position: bottom;
 
-
     }
+
 
     .container {
         display: flex;
-
-        max-width: 52rem;
+   
+        max-width: 50rem;
         align-items:  flex-end;
-
-        gap:2rem;
+       
+        gap:1.5rem;
         
     }
 
-   
 
     .titre {
         padding:2rem;
         margin-bottom: 0;
     }
     
+
     .storage {
-       height:80px;
-       width:100%;
-       max-width: 25rem;
+        width:100%;
+     
+        padding:2.5rem 3rem;
+   
+    }
 
-       padding:1.5rem;
 
-       
+    .storage__header {
+        text-align: left;
+     
+    }
+
+    .storage_reminder {
+        padding:1rem 2rem;
+      
+        margin-right: 3rem;
+        margin-left: auto;
+
+        border-bottom-right-radius: 0;
+
+        transform: translateY(-12.5rem);
+
+        position: relative;
 
         
     }
     
+
+    .storage_reminder::after{
+        content:'';
+        position: absolute;
+        
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid white;
+
+        
+        right:-10px;
+        top:58px;
+
+        transform: rotate(-135deg);
+    }
+
+
 }
 
 
